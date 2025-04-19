@@ -1,0 +1,90 @@
+* {
+  purple:     #9a77ff; /* Un poco más apagado */
+  black:      #000000; /* Negro puro */
+  red:        #ff5c57; /* Rojo más vibrante */
+  green:      #5af78e; /* Verde más claro */
+  yellow:     #f3f99d; /* Amarillo más suave */
+  blue:       #57c7ff; /* Azul más claro */
+  mangenta:   #ff6ac1; /* Magenta más vibrante */
+  cyan:       #9aedfe; /* Cyan más claro */
+  emphasis:   #1c1c1c; /* Fondo de énfasis más oscuro */
+  text:       #ffffff; /* Texto blanco puro */
+  text-alt:   #c5c8c6; /* Texto alternativo más claro */
+  fg:         #eaeaea; /* Color de texto general */
+  bg:         #000000; /* Fondo negro puro */
+
+  spacing: 0;
+  background-color: transparent;
+
+  font: "Dank Mono 12";
+  text-color: @text;
+}
+
+window {
+  transparency: "real";
+  fullscreen: true;
+  background-color: #000000dd; /* Fondo negro con transparencia */
+}
+
+mainbox {
+  padding: 30% 30%;
+}
+
+inputbar {
+  margin: 0px 0px 20px 0px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @blue;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @text-alt;
+}
+
+entry {
+  margin: 0px 10px;
+}
+
+listview {
+  spacing: 5px;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  padding: 5px;
+  text-color: @text-alt;
+  highlight: bold #5af78e; /* Verde más claro */
+  border-radius: 3px;
+}
+
+element selected {
+  background-color: @emphasis;
+  text-color: @text;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @purple;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+  border: 1px;
+  border-color: @cyan;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @emphasis;
+}
