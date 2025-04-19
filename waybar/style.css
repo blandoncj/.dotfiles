@@ -1,0 +1,132 @@
+* {
+  border: none;
+  border-radius: 5px;
+  font-family: "Dank Mono";
+  font-size: 10px;
+  min-height: 8px;
+}
+
+window#waybar {
+  background: transparent;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+#workspaces {
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#workspaces button.persistent {
+  color: #6C91F7;
+  font-size: 8px;
+}
+
+#workspaces button.empty {
+  color: #4A3B6E;
+  font-size: 1.5px;
+}
+
+#workspaces button.active {
+  color: #FFD700;
+  font-weight: bold;
+  background: transparent;
+  font-size: 3px;
+}
+
+#network,
+#pulseaudio,
+#battery,
+#clock,
+#memory,
+#disk,
+#cpu {
+  margin: 4px 6px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: none;
+  color: #D4D4D4;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #D4D4D4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#battery.critical:not(.charging) {
+  background-color: #FF5555;
+  color: #D4D4D4;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    color: #FF5555;
+  }
+}
+
+#backlight {
+  margin: 4px 6px 0;
+  padding: 6px;
+  border-radius: 5px;
+  transition: none;
+  color: #D4D4D4;
+  background: #333333;
+}
+
+#tray {
+  margin: 4px 6px 0;
+  padding: 6px;
+  border-radius: 5px;
+  transition: none;
+  color: #A6A6A6;
+  background: #1A1A1A;
+}
+
+#custom-launcher {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5A9BD6;
+  background: transparent;
+}
+
+#custom-power {
+  margin: 4px 6px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #D4D4D4;
+  background: transparent;
+}
+
+#custom-updates {
+  margin: 4px 6px 0;
+  padding: 6px;
+  border-radius: 5px;
+  transition: none;
+  color: #D4D4D4;
+  background: #8A4B5E;
+}
+
+#custom-media {
+  margin: 4px 6px 0;
+  padding: 6px;
+  border-radius: 5px;
+  transition: none;
+  color: #D4D4D4;
+  background: #6E4B4B;
+}
